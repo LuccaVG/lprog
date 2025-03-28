@@ -17,7 +17,6 @@ if not args.background and not args.system:
     print('=== Programas em Janelas Visiveis ===')
     janelas = gw.getAllTitles()
     janelas_visiveis = [janela for janela in janelas if janela.strip()]
-
     if not janelas_visiveis:
         print('Nenhuma janela visivel encontrada.')
     else:
@@ -44,7 +43,6 @@ if args.system:
     # Definindo critérios para identificar programas do sistema
     system_users = ['SYSTEM', 'LOCAL SERVICE', 'NETWORK SERVICE', 'root']
     system_paths = []
-    
     if os.name == 'nt':  # Windows
         system_paths = ['C:\\Windows\\', 'C:\\Windows\\System32\\']
     else:  # Linux/Mac
